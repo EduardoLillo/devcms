@@ -115,4 +115,9 @@ class ConnectController extends Controller
     	endif;
     	  	
     }
+
+    public function getRecover(){
+        return view('connect.recover');
+    }
+
 }
