@@ -11,7 +11,7 @@
 		</a>
 	</div>
 	<div class="inside">
-	{!! Form::open(['url'=>'/recover'])!!}
+	{!! Form::open(['url'=>'/reset'])!!}
 		<label for="email">Correo Electrónico</label>
 			<div class="input-group">
 				
@@ -19,11 +19,19 @@
 					<div class="input-group-text"><i class="far fa-envelope-open"></i></div>
 				</div>
 
-				{!! Form::email('email',null,['class'=>'form-control','required']) !!}
+				{!! Form::email('email',$email,['class'=>'form-control','required']) !!}
 			</div>
+		<label for="code" class="mtop16">Codigo de recuperacion:</label>
+			<div class="input-group">
+				
+				<div class="input-group-prepend">
+					<div class="input-group-text"><i class="far fa-envelope-open"></i></div>
+				</div>
 
+				{!! Form::number('code', null,['class'=>'form-control','required']) !!}
+			</div>
 		
-			{!! Form::submit('Recuperar contraseña',['class'=>'btn btn-success mtop16']) !!}
+			{!! Form::submit('Enviar mi contraseña',['class'=>'btn btn-success mtop16']) !!}
 			{!! Form::close() !!}
 			@if(Session::has('message'))
 			<div class="container">
