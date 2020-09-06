@@ -6,12 +6,22 @@ body
 h2,h3,h4,h5,ul,body,html
 	padding 0px
 	margin 0px
-
+a 
+	text-decoration none
+.form-control
+	&:focus
+		box-shadow none
+		outline none
+.form-select
+	&:focus
+		box-shadow none
+		outline none
 .mtop16
 	margin-top 16px
 .mar8
 	margin 8px 8px
-
+.mb16
+	margin-bottom 16px
 .wrapper
 	min-height 100vh
 	overflow hidden
@@ -90,7 +100,47 @@ h2,h3,h4,h5,ul,body,html
 				display inline-block
 				color #19213d
 				font-size 1.1em
-				padding 12px 16px
+				padding 12px 16px	
+			ul
+				display inline-block
+				float right
+				margin-right 12px
+				li
+					display inline-block
+					position relative
+					a 
+						color #222
+						display inline-block
+						padding 11px
+						&:hover
+							background-color #f6f6f6
+							color #111
+							text-decoration none
+						i 
+							color #007bff
+					ul
+						background-color #fff
+						border 1px solid #f0f0f0
+						display none
+						float none
+						position absolute
+						right -16px
+						width 200px
+						li 
+							display inline-block
+							border-bottom 1px solid #f0f0f0
+							width 100%
+							&:last-child
+								border-bottom 0px
+							a 
+								display inline-block
+								width value	
+					&:hover
+						ul 
+							display block	
+							li 
+								a
+									display block					
 		.inside
 			padding 16px
 			.nav
@@ -100,11 +150,21 @@ h2,h3,h4,h5,ul,body,html
 					&:hover
 						background-color #9cc7e7
 						color #fff
+			.form_search 
+				display none
+				margin-bottom 16px
+				.btn 
+					width 100%
 			table 
 				thead
 					tr
 						td.w32
-							width 32px							
+							width 32px
+			.big_count
+				display block
+				font-size 2em
+				text-align center
+				width 100%							
 .opts
 	a
 		border-radius 4px

@@ -1,0 +1,51 @@
+color1 = #0991cc
+color2 = #fdd700
+
+body 
+	background-color #f9f9f9
+	font-size 14px
+	font-family: 'roboto', sans-serif;
+	
+a
+	.btn 
+		&:active
+		&:focus
+			box-shadow none
+			outline none
+
+
+nav
+	background-color #fff 
+	border-bottom 2px solid color1
+	.navbar-brand 
+		img 
+			width 180px
+	.navbar-nav
+		li.nav-item
+			a.nav-link
+				border 1px style #fff
+				border-radius 4px
+				color #000
+				font-size .9em
+				font-weight bold
+				margin-right 4px
+				padding 5px 16px !important
+				&:hover
+					color color1
+			a.btn 
+				border 1px solid color1
+				color #000
+				&:hover
+					background-color color2
+		li.link-acc
+			overflow hidden
+			a 
+				display inline-block
+				float left 
+				margin-right 0px !important
+				&:first-child
+					border-radius 4px 0px 0px 4px
+					border-right 1px solid #fff
+				&:last-child
+					border-radius 0px 4px 4px 0px
+				 
